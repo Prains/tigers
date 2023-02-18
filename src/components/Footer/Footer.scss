@@ -1,0 +1,50 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.footer {
+  position: relative;
+  @include m.flex();
+  flex-direction: column;
+  img {
+    margin-bottom: 89px;
+  }
+  &__headphones {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -94px;
+  }
+  &__content {
+    @include m.width(40.78%);
+    margin: 0 auto;
+    padding-top: 215px;
+    padding-bottom: 131px;
+    @include m.flex(center, space-between);
+  }
+  &__columnfirst {
+    p {
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+  &__socials {
+    @include m.flex();
+    gap: 50px;
+  }
+  &__columnsecond {
+    p {
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+}

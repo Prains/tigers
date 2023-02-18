@@ -1,0 +1,36 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.search__form {
+  margin: 0 auto;
+  @include m.width(1440px);
+  @include m.flex(center, space-between);
+  margin-bottom: 50px;
+}
+
+.search__input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  padding-left: 20px;
+  padding-right: 79px;
+
+  &::placeholder {
+    color: #878788;
+  }
+}
+
+.search__submit {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 21px 69px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  :hover {
+    opacity: 0.5;
+  }
+}

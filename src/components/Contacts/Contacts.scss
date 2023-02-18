@@ -1,0 +1,33 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.contacts {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  width: 100%;
+  &__content {
+    @include m.width(70%);
+    margin: 0 auto;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  &__buttons {
+    @include m.flex(center, space-between);
+    @include m.width(596px);
+    p {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
+      margin: 0;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+      padding: 18px 32px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

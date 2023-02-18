@@ -1,0 +1,81 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.form {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  width: 100%;
+  background: #fff;
+  &__content {
+    @include m.width(1440px);
+    @include m.flex(start, space-between);
+    margin: 0 auto;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000;
+    margin: 0;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0;
+    margin-top: 15px;
+  }
+  &__form {
+    @include m.flex();
+    flex-direction: column;
+    gap: 15px;
+    textarea {
+      padding: 20px 349px 20px 26px;
+      height: 159px;
+    }
+    div {
+      @include m.flex();
+      gap: 22px;
+      input {
+        border: 1px solid #000000;
+        border-radius: 5px;
+        height: 37px;
+        width: 37px;
+      }
+      p {
+        @include m.width(528px);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+          text-decoration: underline;
+        }
+      }
+    }
+    input {
+      padding: 20px 349px 20px 26px;
+      color: black;
+      &::placeholder {
+        color: #878787;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    button {
+      background: transparent;
+      padding: 21px 242px;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+    }
+  }
+}

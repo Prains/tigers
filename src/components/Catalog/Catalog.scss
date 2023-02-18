@@ -1,0 +1,31 @@
+@use "../../utils/css/mixins.scss" as m;
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+.catalog {
+  @include m.width(1440px);
+  @include m.flex();
+  gap: 50px;
+  flex-direction: column;
+  margin: 0 auto 256px auto;
+  .numberfields {
+    @include m.width(344px);
+    margin: 0 auto;
+    @include m.flex(center, space-between);
+    p {
+      padding: 10px 15px;
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+      font-family: "Lora";
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      cursor: pointer; 
+      @include m.flex();
+    }
+    &__number-active {
+      border: 3px solid #ffffff !important;
+      border-radius: 5px;
+    }
+  }
+}

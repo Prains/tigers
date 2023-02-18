@@ -1,0 +1,132 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.catalog-item {
+  margin: 0 auto;
+  @include m.width(1440px);
+  @include m.flex(start, space-between);
+
+  .firstpart {
+    @include m.flex(start, center);
+    flex-direction: column;
+    &__bottomslides {
+      @include m.flex();
+      gap: 10px;
+    }
+    &__minorbuttons {
+      margin-top: 36px;
+      @include m.flex();
+      gap: 10px;
+      .minorbuttons__id {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid black;
+          background-color: black;
+        }
+      }
+      .minorbuttons__map {
+        padding: 10px 38px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid black;
+          background-color: black;
+        }
+      }
+    }
+    &__sliderimg {
+      position: relative;
+      @include m.flex();
+      .slider-arrow {
+        cursor: pointer;
+        position: absolute;
+        left: 11px;
+        &:last-of-type {
+          left: unset;
+          right: 11px;
+        }
+      }
+    }
+    &__slider {
+      @include m.flex(start, center);
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .secondpart {
+    @include m.width(758px);
+    &__uppercontent {
+      .uppercontent__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+      }
+      .uppercontent__bottomcontent {
+        margin-top: 30px;
+        @include m.flex(center, space-between);
+        .bottomcontent__description {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          max-width: 394px;
+          margin: 0;
+        }
+        .bottomcontent__button {
+          margin: 0;
+          border: 2px solid #ffffff;
+          border-radius: 5px;
+          padding: 19px 50px;
+          @include m.width(325px);
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+    }
+    &__bottomcontent {
+      margin-top: 36px;
+      @include m.flex(center, start);
+      gap: 50px;
+      .secondpart__leftcontent {
+        @include m.width(315px);
+        .secondpart__description {
+          margin: 0;
+          @include m.flex(start, space-between);
+          @include m.width(315px);
+          padding-bottom: 15px;
+          margin-bottom: 30px;
+          border-bottom: 1px solid #878788;
+          span {
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
+      .secondpart__rightcontent {
+        @include m.flex(start, center);
+        gap: 35px;
+        div {
+          @include m.flex(start, center);
+          flex-direction: column;
+          gap: 35px;
+          p {
+            margin: 0;
+            @include m.flex();
+            gap: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px; 
+          }
+        }
+      }
+    }
+  }
+}

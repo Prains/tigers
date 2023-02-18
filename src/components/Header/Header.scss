@@ -1,0 +1,17 @@
+@use "../../utils/css/mixins.scss" as m;
+
+.header {
+  padding-top: 47px;
+  padding-bottom: 47px;
+  background: #00000040;
+  margin-bottom: 100px;
+  &__content {
+    margin: 0 auto;
+    @include m.width(1440px);
+    @include m.flex(center, space-between);
+  }
+  &__buttons {
+    @include m.flex();
+    gap: 60px;
+  }
+}
